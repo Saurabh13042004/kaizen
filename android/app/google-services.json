@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "836627740858",
+    "project_id": "f-f-education-101-wk4d5p",
+    "storage_bucket": "f-f-education-101-wk4d5p.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:836627740858:android:e6409d16efc6066e44aa83",
+        "android_client_info": {
+          "package_name": "com.kaizen.kaizenapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBRbZrT6g10VtJ_xeIeTIwoE3bWkzEKM-o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
