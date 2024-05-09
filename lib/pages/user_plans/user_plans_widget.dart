@@ -70,7 +70,7 @@ class _UserPlansWidgetState extends State<UserPlansWidget> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 0.0, 0.0),
                 child: Text(
                   'Subscription / Payment',
                   style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -80,7 +80,7 @@ class _UserPlansWidgetState extends State<UserPlansWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 8.0, 0.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 8.0, 0.0, 0.0),
                 child: Text(
                   'Your Subscription',
                   style: FlutterFlowTheme.of(context).labelMedium.override(
@@ -90,7 +90,7 @@ class _UserPlansWidgetState extends State<UserPlansWidget> {
                 ),
               ),
               Padding(
-                padding: const EdgeInsetsDirectional.fromSTEB(16.0, 12.0, 16.0, 0.0),
+                padding: const EdgeInsetsDirectional.fromSTEB(20.0, 12.0, 20.0, 0.0),
                 child: Container(
                   width: double.infinity,
                   decoration: BoxDecoration(
@@ -109,7 +109,7 @@ class _UserPlansWidgetState extends State<UserPlansWidget> {
                   ),
                   child: Padding(
                     padding:
-                        const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 12.0),
+                        const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 20.0, 12.0),
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       mainAxisAlignment: MainAxisAlignment.center,

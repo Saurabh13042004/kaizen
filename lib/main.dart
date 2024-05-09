@@ -123,7 +123,6 @@ class _NavBarPageState extends State<NavBarPage> {
       'user_trades': const UserTradesWidget(),
       'user_plans': const UserPlansWidget(),
       'user_portfolio': const UserPortfolioWidget(),
-      'main_Profile': const MainProfileWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -172,18 +171,6 @@ class _NavBarPageState extends State<NavBarPage> {
               size: 24.0,
             ),
             label: 'Portfolio',
-            tooltip: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.person_outline,
-              size: 24.0,
-            ),
-            activeIcon: Icon(
-              Icons.person,
-              size: 24.0,
-            ),
-            label: '__',
             tooltip: '',
           )
         ],

@@ -42,13 +42,17 @@ class _MainProfileWidgetState extends State<MainProfileWidget> {
       appBar: AppBar(
         backgroundColor: FlutterFlowTheme.of(context).secondaryBackground,
         automaticallyImplyLeading: false,
-        title: Text(
-          'My Profile',
-          style: FlutterFlowTheme.of(context).displaySmall.override(
-                fontFamily: 'Figtree',
-                color: FlutterFlowTheme.of(context).primaryText,
-                letterSpacing: 0.0,
-              ),
+        title: Padding(
+          padding: const EdgeInsetsDirectional.fromSTEB(15.0, 20.0, 15.0, 20.0),
+          child: Text(
+            'My Profile',
+            style: FlutterFlowTheme.of(context).displaySmall.override(
+                  fontFamily: 'Figtree',
+                  color: FlutterFlowTheme.of(context).primaryText,
+                  fontSize: 32.0,
+                  letterSpacing: 0.0,
+                ),
+          ),
         ),
         actions: [
           Padding(
@@ -94,7 +98,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Padding(
-              padding: const EdgeInsetsDirectional.fromSTEB(16.0, 4.0, 16.0, 12.0),
+              padding: const EdgeInsetsDirectional.fromSTEB(30.0, 0.0, 15.0, 15.0),
               child: Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
@@ -102,7 +106,7 @@ class _MainProfileWidgetState extends State<MainProfileWidget> {
                     builder: (context) => Text(
                       valueOrDefault<String>(
                         currentUserDisplayName,
-                        'Churck Norris',
+                        'saurabh123',
                       ),
                       style: FlutterFlowTheme.of(context).bodyMedium.override(
                             fontFamily: 'Plus Jakarta Sans',

@@ -150,7 +150,7 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                       mainAxisSize: MainAxisSize.max,
                       children: [
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: const EdgeInsets.all(15.0),
                           child: Container(
                             width: 370.0,
                             height: 190.0,
@@ -376,6 +376,7 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Text(
                               'Active Trades',
@@ -387,6 +388,45 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                                     letterSpacing: 0.0,
                                     fontWeight: FontWeight.bold,
                                   ),
+                            ),
+                            Row(
+                              mainAxisSize: MainAxisSize.max,
+                              children: [
+                                Text(
+                                  'User',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                                Switch.adaptive(
+                                  value: _model.switchValue ??= true,
+                                  onChanged: (newValue) async {
+                                    setState(
+                                        () => _model.switchValue = newValue);
+                                  },
+                                  activeColor:
+                                      FlutterFlowTheme.of(context).primary,
+                                  activeTrackColor:
+                                      FlutterFlowTheme.of(context).accent1,
+                                  inactiveTrackColor:
+                                      FlutterFlowTheme.of(context).alternate,
+                                  inactiveThumbColor:
+                                      FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                ),
+                                Text(
+                                  'Mentor',
+                                  style: FlutterFlowTheme.of(context)
+                                      .bodyMedium
+                                      .override(
+                                        fontFamily: 'Plus Jakarta Sans',
+                                        letterSpacing: 0.0,
+                                      ),
+                                ),
+                              ].divide(const SizedBox(width: 10.0)),
                             ),
                           ],
                         ),
@@ -1276,25 +1316,21 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Padding(
-                        padding:
-                            const EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 0.0, 20.0),
-                        child: Row(
-                          mainAxisSize: MainAxisSize.max,
-                          children: [
-                            Text(
-                              'Pending Trades',
-                              style: FlutterFlowTheme.of(context)
-                                  .bodyMedium
-                                  .override(
-                                    fontFamily: 'Plus Jakarta Sans',
-                                    fontSize: 20.0,
-                                    letterSpacing: 0.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                            ),
-                          ],
-                        ),
+                      Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          Text(
+                            'Pending Trades',
+                            style: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .override(
+                                  fontFamily: 'Plus Jakarta Sans',
+                                  fontSize: 20.0,
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                          ),
+                        ],
                       ),
                       Row(
                         mainAxisSize: MainAxisSize.max,
@@ -1310,17 +1346,21 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                                   fontWeight: FontWeight.bold,
                                 ),
                           ),
-                          Text(
-                            '24 %',
-                            style: FlutterFlowTheme.of(context)
-                                .bodyMedium
-                                .override(
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  letterSpacing: 0.0,
-                                  fontWeight: FontWeight.bold,
-                                ),
+                          Padding(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
+                                0.0, 0.0, 10.0, 0.0),
+                            child: Text(
+                              'Side',
+                              style: FlutterFlowTheme.of(context)
+                                  .bodyMedium
+                                  .override(
+                                    fontFamily: 'Plus Jakarta Sans',
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                            ),
                           ),
-                        ].divide(const SizedBox(width: 20.0)),
+                        ].divide(const SizedBox(width: 65.0)),
                       ),
                       Padding(
                         padding:
@@ -1356,7 +1396,7 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Text(
-                                      '5',
+                                      '\$5k',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -1366,7 +1406,7 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                                           ),
                                     ),
                                     Text(
-                                      '9',
+                                      'Long',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -1415,7 +1455,7 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                                   mainAxisAlignment: MainAxisAlignment.end,
                                   children: [
                                     Text(
-                                      '5',
+                                      '\$5K',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
@@ -1425,7 +1465,7 @@ class _UserDashboardWidgetState extends State<UserDashboardWidget> {
                                           ),
                                     ),
                                     Text(
-                                      '9',
+                                      'Short',
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(

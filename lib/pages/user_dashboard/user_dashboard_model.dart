@@ -7,6 +7,8 @@ class UserDashboardModel extends FlutterFlowModel<UserDashboardWidget> {
   ///  State fields for stateful widgets in this page.
 
   final unfocusNode = FocusNode();
+  // State field(s) for Switch widget.
+  bool switchValue = true;
   // State field(s) for Expandable widget.
   late ExpandableController expandableExpandableController1;
 

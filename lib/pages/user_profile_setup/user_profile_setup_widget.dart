@@ -1,4 +1,3 @@
-import '/auth/firebase_auth/auth_util.dart';
 import '/flutter_flow/flutter_flow_icon_button.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -138,7 +137,7 @@ class _UserProfileSetupWidgetState extends State<UserProfileSetupWidget> {
                     ),
                   ),
                 Padding(
-                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 0.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(20.0, 0.0, 0.0, 0.0),
                   child: Text(
                     'User Profile Setup',
                     style: FlutterFlowTheme.of(context).headlineMedium.override(
@@ -232,10 +231,20 @@ class _UserProfileSetupWidgetState extends State<UserProfileSetupWidget> {
                                   Row(
                                     mainAxisSize: MainAxisSize.max,
                                     children: [
-                                      const Icon(
-                                        Icons.circle_outlined,
-                                        color: Color(0xFFBA3B00),
-                                        size: 24.0,
+                                      InkWell(
+                                        splashColor: Colors.transparent,
+                                        focusColor: Colors.transparent,
+                                        hoverColor: Colors.transparent,
+                                        highlightColor: Colors.transparent,
+                                        onTap: () async {
+                                          context.pushNamed(
+                                              'Details02BasicLayout');
+                                        },
+                                        child: const Icon(
+                                          Icons.circle_outlined,
+                                          color: Color(0xFFBA3B00),
+                                          size: 24.0,
+                                        ),
                                       ),
                                       Text(
                                         'Not Connected',
@@ -422,21 +431,7 @@ class _UserProfileSetupWidgetState extends State<UserProfileSetupWidget> {
                             const EdgeInsetsDirectional.fromSTEB(0.0, 24.0, 0.0, 0.0),
                         child: FFButtonWidget(
                           onPressed: () async {
-                            if (_model
-                                .emailAddressTextController1.text.isEmpty) {
-                              ScaffoldMessenger.of(context).showSnackBar(
-                                const SnackBar(
-                                  content: Text(
-                                    'Email required!',
-                                  ),
-                                ),
-                              );
-                              return;
-                            }
-                            await authManager.resetPassword(
-                              email: _model.emailAddressTextController1.text,
-                              context: context,
-                            );
+                            context.pushNamed('Details02BasicLayout');
                           },
                           text: 'Submit',
                           options: FFButtonOptions(

@@ -6,7 +6,6 @@ export '/pages/create_account/create_account_widget.dart'
 export '/pages/main_profile/main_profile_widget.dart' show MainProfileWidget;
 export '/pages/create_profile/create_profile_widget.dart'
     show CreateProfileWidget;
-export '/survey_page/survey_page_widget.dart' show SurveyPageWidget;
 export '/pages/user_dashboard/user_dashboard_widget.dart'
     show UserDashboardWidget;
 export '/pages/user_wallet/user_wallet_widget.dart' show UserWalletWidget;
@@ -17,3 +16,5 @@ export '/pages/user_profile_setup/user_profile_setup_widget.dart'
     show UserProfileSetupWidget;
 export '/pages/user_course/user_course_widget.dart' show UserCourseWidget;
 export '/pages/user_trades/user_trades_widget.dart' show UserTradesWidget;
+export '/pages/details02_basic_layout/details02_basic_layout_widget.dart'
+    show Details02BasicLayoutWidget;

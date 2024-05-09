@@ -96,9 +96,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
         FFRoute(
           name: 'main_Profile',
           path: '/mainProfile',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'main_Profile')
-              : const MainProfileWidget(),
+          builder: (context, params) => const MainProfileWidget(),
         ),
         FFRoute(
           name: 'create_Profile',
@@ -111,11 +109,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               collectionNamePath: ['users'],
             ),
           ),
-        ),
-        FFRoute(
-          name: 'surveyPage',
-          path: '/surveyPage',
-          builder: (context, params) => const SurveyPageWidget(),
         ),
         FFRoute(
           name: 'user_dashboard',
@@ -159,6 +152,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? const NavBarPage(initialPage: 'user_trades')
               : const UserTradesWidget(),
+        ),
+        FFRoute(
+          name: 'Details02BasicLayout',
+          path: '/details02BasicLayout',
+          builder: (context, params) => const Details02BasicLayoutWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
@@ -419,4 +417,14 @@ class RootPageContext {
         value: RootPageContext(true, errorRoute),
         child: child,
       );
+}
+
+extension GoRouterLocationExtension on GoRouter {
+  String getCurrentLocation() {
+    final RouteMatch lastMatch = routerDelegate.currentConfiguration.last;
+    final RouteMatchList matchList = lastMatch is ImperativeRouteMatch
+        ? lastMatch.matches
+        : routerDelegate.currentConfiguration;
+    return matchList.uri.toString();
+  }
 }
