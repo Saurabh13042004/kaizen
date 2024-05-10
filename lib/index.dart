@@ -18,3 +18,4 @@ export '/pages/user_course/user_course_widget.dart' show UserCourseWidget;
 export '/pages/user_trades/user_trades_widget.dart' show UserTradesWidget;
 export '/pages/details02_basic_layout/details02_basic_layout_widget.dart'
     show Details02BasicLayoutWidget;
+export '/modal_profile/modal_profile_widget.dart' show ModalProfileWidget;

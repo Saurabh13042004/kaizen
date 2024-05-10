@@ -157,6 +157,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: 'Details02BasicLayout',
           path: '/details02BasicLayout',
           builder: (context, params) => const Details02BasicLayoutWidget(),
+        ),
+        FFRoute(
+          name: 'modal_profile',
+          path: '/modalProfile',
+          builder: (context, params) => const ModalProfileWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

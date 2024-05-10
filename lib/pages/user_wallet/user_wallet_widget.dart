@@ -161,7 +161,7 @@ class _UserWalletWidgetState extends State<UserWalletWidget> {
                       'XXXXXXXXXXXXXXXXXXXXXXXXX',
                       style: FlutterFlowTheme.of(context).labelLarge.override(
                             fontFamily: 'Plus Jakarta Sans',
-                            fontSize: 20.0,
+                            fontSize: 18.0,
                             letterSpacing: 0.0,
                             fontWeight: FontWeight.w600,
                           ),
